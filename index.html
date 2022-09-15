@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EX4DOM</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Atividade Prática Individual</h1>
+    <h2>1 Ordenação</h2>
+    <p>
+      Crie um script que preencha a tabela com valores. Depois crie outro script
+      que ordene os valores da tabela
+    </p>
+    <table id="t1">
+      <th>Valores</th>
+      <tr>
+        <td>00,00</td>
+      </tr>
+      <tr>
+        <td>00,00</td>
+      </tr>
+      <tr>
+        <td>00,00</td>
+      </tr>
+    </table>
+    <!-----------------Resposta do Exercício 1------------>
+        <script>
+          var a1 = (Math.random() * 100).toFixed(2)
+          var a2 = (Math.random() * 100).toFixed(2)
+          var a3 = (Math.random() * 100).toFixed(2)
+          var maior = 0
+          var maior2 = 0
+          var maior3 = 0
+
+          if(a1 > a2 && a1 > a3){
+            maior = a1
+          }else if(a2 > a3){
+            maior2 = a2
+            maior3 = a3
+          }else{
+            maior2 = a3
+            maior3 = a2
+          }
+
+          if(a2 > a1 && a2 > a3){
+            maior = a2
+          }else if(a1 > a3){
+            maior2 = a1
+            maior3 = a3
+          }else{
+            maior2 = a3
+            maior3 = a1
+          }
+
+          if(a3 > a2 && a3 > a1){
+            maior = a3
+          }else if(a1 > a2){
+            maior2 = a1
+            maior3 = a2
+          }else{
+            maior2 = a2
+            maior3 = a1
+          }
+
+          document.getElementById('t1').childNodes[1].childNodes[1].innerHTML = maior
+          document.getElementById('t1').childNodes[1].childNodes[3].innerHTML = maior2
+          document.getElementById('t1').childNodes[1].childNodes[5].innerHTML = maior3
+        </script>
+    <!---------------------------------------------------->
+    <h2>2 Cores</h2>
+    <p>
+      Crie um script que gere uma cor aleatória em rgb e a apresente em um li
+      dentro da lista abaixo, deve-se, também, criar um gradiente linear de
+      branco até esta cor como cor de fundo do li.
+    </p>
+    <ul id="lista-cores" style="list-style: none; padding: 0"></ul>
+
+    <!-----------------Resposta do Exercício 2------------>
+        <script>
+          document.getElementById("lista-cores").innerHTML = "<li style = 'background-image: linear-gradient(red, yellow'></li>"
+        </script>
+    <!---------------------------------------------------->
+
+    <h2>3 Países</h2>
+    <p>
+      Crie um script que encontre o país com o maior nome e o apresente em uma
+      div azul abaixo da tabela, e risque o pais com o menor nome, colocando sua
+      letra em vermelha
+    </p>
+    <table id="t2">
+      <th>País</th>
+      <tr>
+        <td>Brasil</td>
+      </tr>
+      <tr>
+        <td>Honduras</td>
+      </tr>
+      <tr>
+        <td>Peru</td>
+      </tr>
+      <tr>
+        <td>Alemanha</td>
+      </tr>
+      <tr>
+        <td>China</td>
+      </tr>
+      <tr>
+        <td>Rússia</td>
+      </tr>
+      <tr>
+        <td>Itália</td>
+      </tr>
+      <tr>
+        <td>Indonésia</td>
+      </tr>
+      <tr>
+        <td>Espanha</td>
+      </tr>
+      <tr>
+        <td>Cazaquistão</td>
+      </tr>
+      <tr>
+        <td>Chile</td>
+      </tr>
+      <tr>
+        <td>Argentina</td>
+      </tr>
+      <tr>
+        <td>Croácia</td>
+      </tr>
+      <tr>
+        <td>Portugal</td>
+      </tr>
+      <tr>
+        <td>Venezuela</td>
+      </tr>
+      <tr>
+        <td>Costa do Marfim</td>
+      </tr>
+      <tr>
+        <td>Congo</td>
+      </tr>
+      <tr>
+        <td>México</td>
+      </tr>
+    </table>
+    <div id="paisMaior"></div>
+
+    <!-----------------Resposta do Exercício 3------------>
+
+    <script>
+      document.getElementById('t2').childNodes[5].innerHTML
+      document.getElementById('paisMaior')
+    </script>
+    <!---------------------------------------------------->
+
+    <h2>4 Autopreenchimento</h2>
+    <p>
+      Crie um script que escolha aleatóriamente um nome presente na lista de
+      nomes abaixo e preencha o campo de email com um email composto por
+      'nome@gmail.com'. Além disso, deve-se criar uma senha contendo as inicias
+      de todos os nomes da lista, a começar do último ao primeiro
+    </p>
+    <p>Lista de Nomes</p>
+    <ul id="lista-nomes">
+      <li>Vanessa</li>
+      <li>Luan</li>
+      <li>Carlos</li>
+      <li>Adalberto</li>
+      <li>Jefferson</li>
+      <li>Giovanna</li>
+      <li>Renata</li>
+      <li>Kleber</li>
+      <li>Tatiane</li>
+      <li>Ronaldo</li>
+      <li>Hugo</li>
+      <li>Nilson</li>
+      <li>Santos</li>
+      <li>Marcia</li>
+      <li>Leticia</li>
+      <li>Paula</li>
+      <li>Katarina</li>
+      <li>Artur</li>
+      <li>Henrique</li>
+      <li>Lilian</li>
+    </ul>
+    <form action="#" id="form-preenchimento">
+      <input type="email" placeholder="Email" />
+      <input type="text" placeholder="Senha" />
+    </form>
+
+    <!-----------------Resposta do Exercício 4------------>
+  
+    <script>
+      var nome1 = document.getElementById("lista-nomes").childNodes[0]
+      var nome2 = document.getElementById("lista-nomes").childNodes[1]
+      var nome3 = document.getElementById("lista-nomes").childNodes[2]
+      var nome4 = document.getElementById("lista-nomes").childNodes[3]
+      var nome5 = document.getElementById("lista-nomes").childNodes[4]
+      var nome6 = document.getElementById("lista-nomes").childNodes[5]
+      var nome7 = document.getElementById("lista-nomes").childNodes[6]
+      var nome8 = document.getElementById("lista-nomes").childNodes[7]
+      var nome9 = document.getElementById("lista-nomes").childNodes[8]
+      var nome10 = document.getElementById("lista-nomes").childNodes[9]
+      var nome12 = document.getElementById("lista-nomes").childNodes[10]
+      var nome13 = document.getElementById("lista-nomes").childNodes[11]
+      var nome14 = document.getElementById("lista-nomes").childNodes[12]
+      var nome15 = document.getElementById("lista-nomes").childNodes[13]
+      var nome16 = document.getElementById("lista-nomes").childNodes[14]
+      var nome17 = document.getElementById("lista-nomes").childNodes[15]
+      var nome18 = document.getElementById("lista-nomes").childNodes[16]
+      var nome19 = document.getElementById("lista-nomes").childNodes[17]
+      var nome20 = document.getElementById("lista-nomes").childNodes[18]
+      var nome21 = document.getElementById("lista-nomes").childNodes[19]
+
+      let alea = ((Math.random()).toFixed(1)) * 100
+      
+      
+      if(alea == 0.1){
+        document.querySelector('form-preenchimento').childNodes[0].value = "vanessa@gmail.com"
+      }else if(alea == 0.2){
+        document.querySelector('form-preenchimento').childNodes[1].value = "vanessa@gmail.com"
+      }
+      window.document.getElementById("form-preenchimento").childNodes[0].value = "vanessa@gmail.com"
+    </script>
+
+    <!---------------------------------------------------->
+  </body>
+</html>
